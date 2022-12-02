@@ -21,26 +21,30 @@
 
     .prueba{
         border: 1em 2em;
-        color: white;
-        text-shadow: black 0.1em 0.1em 0.2em;
+        color: #feeba9;
+        text-shadow: #000000 0.1em 0.1em 0.1em;
     }
 
     .cajaMisteriosa{
         width: 40%; 
     }
 #boton{
-    background-color: rgba(255, 255, 255, .7);
+    background-color: #2a3c6e;
+    color: white;
     padding: .5em;
     border-top-color: white;
     border-right-color: white;
-    border-bottom-color: rgb(204, 204, 204);
-    border-left-color: rgb(204, 204, 204);
-
-
+    border-bottom-color: rgb(170, 170, 170);
+    border-left-color: rgb(129, 129, 129);
+    transition: .3s;
 }
 
+#boton:hover{
+    background-color: white;
+    color: black;
+    transition: .6s;
+}
 
 .img{
     width: 100%;
 }
-
