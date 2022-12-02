@@ -1,32 +1,42 @@
 let boton = document.getElementById("boton");
 let pista = document.getElementById("pista");
 let titulo = document.getElementById("titulo");
-let contador = parseInt(0)
-
-let random = Math.random();
-random = Math.trunc(random * 100 + 1)
-
-boton.onclick = funcionNroAleatorio
+let contador;
 
 
-function funcionNroAleatorio(){
-do {
-    let nroElegido = parseInt(prompt("¿puedes adivinar un número del 1 al 100, en 7 intentos o menos?"))
-    nroElegido;
-    contador++;
+boton.addEventListener('click',function(){
+    reiniciar();
+},false)
 
-    if(nroElegido == random){
-        alert("FELICIDADES! Has ganado. Reinicia la página para jugar otra vez :)");
-        contador = 7;
-
-    } else if(nroElegido < random){
-        alert("Una pista: Su numero es demasiado BAJO");
-    } else if(nroElegido > random){
-        alert("Una pista: Su numero es demasiado ALTO");
-
+function funcionNroAleatorio(random){
+    while (contador<=7) {
+        let turno = parseInt(7 - contador)
+        let nroElegido = parseInt(prompt("¿puedes adivinar un número del 1 al 100? te quedan " + turno + " intentos"))
+        contador++;
+        
+        if(nroElegido >100 || nroElegido< 0){
+            alert("!error: El número debe estar en el intervalo 0-100. Vuelva a intentarlo")
+            contador--;
+        }else if(contador == 7){
+            alert("Has PERDIDO. Toca de vuelta el botón para empezar otra vez")
+            contador = 7;
+            break;
+        }else if(nroElegido == random){
+            alert("FELICIDADES! Has ganado. Toca de vuelta el botón para empezar otra vez :)");
+            contador = 7;
+            break;
+        } else if(nroElegido < random){
+            alert("Una pista: Su numero es demasiado BAJO");
+        } else if(nroElegido > random){
+            alert("Una pista: Su numero es demasiado ALTO");
+        }
     }
-    
-} while (contador<7);
+}
 
 
+function reiniciar(){
+    let random = Math.random();
+    random = Math.trunc(random * 100 + 1);
+    funcionNroAleatorio(random);
+    contador = 0;
 }

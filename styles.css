@@ -1,9 +1,46 @@
-.contenedor{
-    margin:0px auto
-}
 
-.prueba{
-    border: 1em 2em;
-    background-color: bisque;
+.contenedor2{
+    background-image: url("img/1400x873-Anime-Nubes-Cielo-Fondo-de-Pantalla-HD-ESCRITORIO-Y-MOVIL.jpg");
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    opacity: .8;
     
 }
+
+.contenedor1{
+    background-color: rgba(255, 255, 255, .7);
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+    .prueba{
+        border: 1em 2em;
+        color: white;
+        text-shadow: black 0.1em 0.1em 0.2em;
+    }
+
+    .cajaMisteriosa{
+        width: 40%; 
+    }
+#boton{
+    background-color: rgba(255, 255, 255, .7);
+    padding: .5em;
+    border-top-color: white;
+    border-right-color: white;
+    border-bottom-color: rgb(204, 204, 204);
+    border-left-color: rgb(204, 204, 204);
+
+
+}
+
+
+.img{
+    width: 100%;
+}
+
